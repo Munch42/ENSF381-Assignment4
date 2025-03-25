@@ -1,6 +1,9 @@
 import './Header.css';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+  const navigate = useNavigate();
+
   return (
     <>
     <header>
@@ -8,7 +11,7 @@ function Header() {
         <h1>LMS - Learning Management System</h1>
     </header>
     <div id="nav">
-        <a href="login.html">Login</a><a href="leaderboard.html">Leaderboard</a><a href="#about">About LMS</a>
+        <a onClick={() => navigate("/")}>Home</a><a onClick={() => navigate("/courses")}>Courses</a><a onClick={() => navigate("/login")}>Login</a>
     </div>
     </>
   );

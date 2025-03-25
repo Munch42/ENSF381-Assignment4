@@ -1,3 +1,4 @@
+import FeaturedCourses from './FeaturedCourses';
 import './MainSection.css';
 
 function MainSection() {
@@ -16,7 +17,7 @@ function MainSection() {
                 <li>View leaderboards</li>
             </ul>
         </div>
-      <p>Featured Courses</p>
+      <FeaturedCourses />
       <p>Testimonials</p>
     </div>
   );

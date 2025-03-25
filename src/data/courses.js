@@ -72,7 +72,7 @@ const courses = [
         image: "images/course1.jpg"
     },
     {
-        id: 9,
+        id: 10,
         name: "Introduction to Python",
         instructor: "Jim Robinson",
         description: "Learn Python, the most popular new language in Data Science",
