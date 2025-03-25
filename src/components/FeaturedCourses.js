@@ -1,31 +1,37 @@
+import { useState, useEffect } from "react";
 import courses from "../data/courses";
+import "./FeaturedCourses.css";
 
 function FeaturedCourses() {  
-    // We create a set (so that only one of each element can be in it) and
-    // then add items until we get 3 courses 
-    const courseIndices = new Set();
+    const [courseList, setCourseList] = useState([]);
 
-    while(courseIndices.size !== 3) {
-        courseIndices.add(Math.floor(Math.random() * 10) + 1);
-    }
+    useEffect(() => {
+        // We create a set (so that only one of each element can be in it) and
+        // then add items until we get 3 courses 
+        const courseIndices = new Set();
 
-    // TODO: Display course-list as horizontal blocks side by side
+        while(courseIndices.size !== 3) {
+            courseIndices.add(Math.floor(Math.random() * courses.length));
+        }
 
-    let courseList = [];
+        let tempCourseList = [];
 
-    let i = 0
-    courseIndices.forEach((courseIndex) => {
-        courseList[i] = courses[courseIndex];
-        i++;
-    });
+        let i = 0;
+        courseIndices.forEach((courseIndex) => {
+            tempCourseList[i] = courses[courseIndex];
+            i++;
+        });
+
+        setCourseList(tempCourseList);
+    }, []);
 
     return (
-    <div>
+    <div className="featured-courses">
         <h2>Featured Courses</h2>
         <div className="course-list">
             {courseList.map(function(item) {
                 return (
-                    <div> 
+                    <div className="course-item"> 
                         <h3>{item.name}</h3>
                         <h4>{item.instructor}</h4>
                         <p>{item.description}</p>

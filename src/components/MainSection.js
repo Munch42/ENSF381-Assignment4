@@ -1,5 +1,6 @@
 import FeaturedCourses from './FeaturedCourses';
 import './MainSection.css';
+import Testimonials from './Testimonials';
 
 function MainSection() {
   return (
@@ -18,7 +19,7 @@ function MainSection() {
             </ul>
         </div>
       <FeaturedCourses />
-      <p>Testimonials</p>
+      <Testimonials />
     </div>
   );
 }
