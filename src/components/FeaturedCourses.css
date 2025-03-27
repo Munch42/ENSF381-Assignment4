@@ -11,7 +11,7 @@
     width: 100%;
 }
 
-.course-item {
+.featured-course-item {
     flex: 1;
     max-width: 300px;
     display: flex;
@@ -21,9 +21,9 @@
     border-radius: 8px;
 }
 
-.course-item h3,
-.course-item h4,
-.course-item p {
+.featured-course-item h3,
+.featured-course-item h4,
+.featured-course-item p {
     width: 100%;
     text-align: center;
     margin: 5px 0;

@@ -14,6 +14,7 @@ function FeaturedCourses() {
             courseIndices.add(Math.floor(Math.random() * courses.length));
         }
 
+        // TODO: Display course-list as horizontal blocks side by side
         let tempCourseList = [];
 
         let i = 0;
@@ -31,7 +32,7 @@ function FeaturedCourses() {
         <div className="course-list">
             {courseList.map(function(item) {
                 return (
-                    <div className="course-item"> 
+                    <div className="featured-course-item"> 
                         <h3>{item.name}</h3>
                         <h4>{item.instructor}</h4>
                         <p>{item.description}</p>
