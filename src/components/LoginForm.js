@@ -5,7 +5,7 @@ import "./LoginForm.css";
 
 export const AuthContext = createContext();
 
-const LoginForm = () => {
+function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [statusType, setStatusType] = useState(null);
